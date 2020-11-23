@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title> <!--Position - Relative - Absolute-->
+    <style>
+        .fixed-topbar {
+            width: 50%;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            position: fixed; /* Sayfayı aşağı kaydırsan bile hep orada kalır.*/
+            right: 0; /*Sağ üste kalmasını istersek right 0 verilir. */
+            bottom: 0; /*Sağ altta kalmasını istersek bottom:0 */
+        }
+        .red {
+            width: 200px;
+            border: 1px solid black;
+            height: 200px;
+            background-color: red;
+            position: relative; /*Sadece Bulunduğu yerden pozisyon vermek için */
+            top: 10px;
+            left: 100px;
+        }
+        .blue {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: blue;
+            position: relative;
+            left: 150px;
+            bottom: 50px;
+            z-index: -1;
+            /* z index default değeri = 0'dır.
+            Hangi divin arkada olmasını istiyorsak o divin z-index
+            değerini diğer divinkinden düşük tutmamız gerekiyor. */
+        }
+        .outer-box {
+            width: 200px;
+            height: 200px;
+            background-color: #a7a7a7;
+            /*Mutlaka parent elementede position verilmeli(static olmamalı) */
+            position: relative;
+        }
+        .inner-box {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            left: 20px;
+            bottom: 50px;
+            /* Absolute özelliği sayesinde parent dive göre pozisyon veririz  */
+
+        }
+        span {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background-color: burlywood;
+            position: relative;
+            left: 75px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body style="height: 1000px;">
+    <div class="fixed-topbar">
+        Udemy
+    </div>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="outer-box">
+        <div class="inner-box"></div>
+    </div>
+    <br>
+    <span></span>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, labore!
+    
+</body>
+</html>

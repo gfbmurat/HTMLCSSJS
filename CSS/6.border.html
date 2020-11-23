@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Border</title>
+
+    <style>
+        .box1 {
+            width: 400px;
+            background: seagreen;
+            
+            /* Border = sınır,kenar */
+            border-color: rebeccapurple; /* Kenarlık rengi ayarlandı. */
+            border-width:5px; /* Kenarlık kalınlığı ayarlandı. */
+            border-style: solid; 
+            /* Kenarlık tipi ayarlandı.(Dotted = Noktalı | Dashed = Çizgili) */
+            border: 5px rebeccapurple solid; /* Yukardakileri tek satırda yapmak */
+            border-left-width: 5px; /* Sadece sol tarafa kenarlık koyar */
+            border-radius: 10px; /* Kenarlık ovalleştirmek için radius kullanılır */
+            border:solid 1px red;
+        }
+
+        .box2 {
+            background-color: red;
+            height: 50px;
+            width: 50px; /* 50x50'lik bir kutu koyduk */
+            border-radius: 50px; 
+            /* Eğer radius 50 verirsek kare daire olucak şekilde ovalleşir. */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1>
+            Merhaba Dünya
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, inventore nostrum. Consequatur quibusdam cupiditate aliquid, corporis culpa explicabo quas laudantium totam repudiandae aperiam expedita quia vel aspernatur odio repellendus dolores est minus adipisci enim laborum libero? Eaque minima quibusdam architecto repellendus eius quae quam recusandae magni, esse, consequatur voluptatum nesciunt?</p>
+    </div> <br> <br>
+    <div class="box2"></div>
+</body>
+</html>

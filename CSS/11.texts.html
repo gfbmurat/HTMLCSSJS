@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Texts</title>
+    <style>
+        h1 {
+            background: seashell;
+        }
+        .heading1 {
+            text-align: left; /* Text Align text konumlandırma yapar */
+        }
+        .heading2 {
+            text-align: center; /* Text Align text konumlandırma yapar */
+        }
+        .heading3 {
+            text-align: right; /* Text Align text konumlandırma yapar */
+        }
+
+        p {
+            letter-spacing: 3px; /* Letter-spacing sayesinde harflerin
+            araları açılır -> M e r h a b a  gibi*/
+        }
+        span {
+            text-decoration: line-through; 
+/* Kelime altını(underline),üstünü(overline) veya ortasını(line-through) 
+    çizmek için kullanılır. */ 
+        }
+        .heading-4 {
+            text-transform: capitalize; /* Kelime baş harfini büyültür. */
+            /* text-transform : uppercase(hepsini büyültür) */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading1">Başlık 1</h1>
+    <h1 class="heading2">Başlık 2</h1>
+    <h1 class="heading3">Başlık 3</h1>
+    
+    <div class="box-1">
+        <h1 class="heading-4">article 1</h1>
+        <p>Lorem <span>ipsum</span> <a style="text-decoration: none;" href="#">dolor</a>  sit amet consectetur adipisicing elit. Laboriosam, voluptas!</p>
+
+    </div>
+</body>
+</html>

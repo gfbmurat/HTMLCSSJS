@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Flexbox</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 75%;
+            margin: 0 auto;
+            display: flex; /* Flexbox haline getirmek için */
+            min-height: 600px;
+            /*Min-height en az 600 daha yukarı çıkabilirsin. */
+            background-color: black;
+            flex-direction: row;
+/* flex direction : row-> yatayda justify-content dikeyde align-items */
+/* flex direction : column-> yatayda align-items dikeyde justify-content */
+            /* default olarak satır */
+            /*flex-direction: column; */
+            justify-content: flex-start; /*Default özelliği */
+            justify-content: flex-end; /* Sağ tarafa yaslamak için */
+            justify-content: center; /* Ortaya almak için */
+            justify-content: space-evenly; /* Her tarafından eşit boşluk için */
+        /* Diğer özellikler : space-between - space-evenly space-around */
+            align-items: stretch; /* Default özelliği strech = uzatmak-germek */
+            align-items: flex-start;
+            /*Diğer özellikler : center - flex-end */
+            flex-wrap: wrap; /* Kutular sığmadığı için aşağıya getirir. */
+        }
+        .box {
+            text-align: center;
+            background: #f2f2f2;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Flex Container-->
+
+<!--Fazladan div koyduğumuzda hepsini aynı satıra sığdırmaya çalışır(flex-wrap).-->
+    <div class = "container">
+        <div class="box">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+         </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+         </div>
+         <div class="box">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="box">
+                <h1>Article 2</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+             </div>
+            <div class="box">
+                <h1>Article 3</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+             </div>
+             <div class="box">
+                <h1>Article 3</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+             </div>
+             
+        
+    </div>
+    
+</body>
+</html>

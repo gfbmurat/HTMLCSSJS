@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float</title>
+    <!--Float çok az kullanılıyor.Artık flexbox kullanılıyor.-->
+    <style>
+        .image1 {
+            width: 600px;
+            height: 400px;
+            float: left; /*Bu özellik sayesinde resim solda yazı hemen
+            sağından başlar.  */
+            margin-right: 10px;
+        }
+        .image2 {
+            width: 600px;
+            height: 400px;
+            float: right; /*Bu özellik sayesinde resim sağda yazı hemen
+            solunda başlar.  */
+            margin-right: 10px;
+        }
+        .box {
+            width: 33%;
+            height: 200px;
+            /*Kutular alt alta gelir ancak float left özelliği sayesinde
+            yan yana getirebiliriz. */
+            float: left;
+        }
+        .box-1 {
+            background-color: blue;
+        }
+        .box-2 {
+            background-color: red;
+        }
+        .box-3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <img class="image1" src="images/valorant.jpg" alt="">
+    <img class="image2" src="images/valorant.jpg" alt="">
+    <div style="clear: both;"></div>
+    <!--Yazı normal resimlerin altından başlamasını istersek
+    float özelliklerini temizlemek için clear:both veya clear:left veya clear:right yapabiliriz.-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minima explicabo quibusdam debitis consequatur cumque. Ad voluptatibus magni alias accusantium? Fuga animi rerum quos velit tempore sit ducimus nam qui? Earum obcaecati voluptate accusamus ipsam totam ab ex voluptatibus. Rem aliquid quod sapiente aliquam enim, velit, quaerat vel dolorum consequuntur repudiandae repellat dolores voluptas odit aut vero officiis quidem, in hic earum ea veniam. Nulla deserunt odio quas culpa nihil modi obcaecati itaque ab neque voluptatibus maiores praesentium soluta quam molestias amet quibusdam vel distinctio officiis id atque ut rem fugiat, ea tempora. Odit sequi porro accusantium est quod quam.</p>
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</body>
+</html>

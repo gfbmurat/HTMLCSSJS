@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Margin</title>
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+            /* Body kısmındaki margin ve paddingleri sıfırladık. */
+        }
+        div {
+            border: black 3px solid;
+        }
+        div.box-1 {
+            margin-left: 50px; /* Soldan 50px margin koyduk */
+            margin-right: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        div.box-2 {
+    /* Margin tek satırda yazmak için -> top right bottom left */
+            margin : 50px 50px 50px 50px;
+        }
+        div.box-3 {
+    /* Margin'i sadece top-bottom ve right-left vermek için aşağıdaki
+     yöntem kullanılır. */
+            /* top-bottom right-left */
+            margin : 50px 20px;
+        }
+        div.box-4 {
+            /* */
+            background-color: seagreen;
+    /* Tarayıcının otomatik margin vermesi için auto özelliği kullanılır. */
+            margin-left : auto;
+            margin-right: auto; /* margin : 0 auto şeklide yazılabilir. */
+            width: 50%;  
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, deserunt!
+
+    </div>
+    <div class="box-2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cumque.
+    </div>
+    <div class="box-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, tempore.
+    </div>
+    <div class="box-4">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, delectus?
+    </div>
+</body>
+</html>

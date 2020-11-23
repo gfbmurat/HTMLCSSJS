@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Responsive Units</title> <!--width=yatay | height=dikey-->
+    <!--
+        Responsive Units
+        em,rem, % , vw(viewport width), vh(viewport height)
+        Ekran vw=100,vh=100
+    -->
+    <style>
+        /*em -> Parent'ın font-size'nın katı alınır. */
+        /*rem -> Kök elementin(html=16px) katı alınır. */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            font-size: 1.5em; /*16*1.5 = 24 */
+        }
+        p.para1 {
+            font-size: 1.5rem; /* 16*1.5 = 24 */
+            padding: 1.5em; /* 24* 1.5 = 36 */ 
+    /*Kendi elementimizin font-size neyse ona göre bir padding verilir */
+        }
+        p.para2 {
+            font-size: 50%; /* 24(div) / 2 = 12 */
+        }
+        div.view {
+            width: 50vw; /* Yatay Kalan alanın %50si */
+            height: 100vh; /* Dikey Kalan alanın %50si */
+
+            background: url("./images/gamepad.jpg") center center no-repeat;
+            background-size: cover;
+            
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <p class="para1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, voluptate.</p>
+        <p class="para2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, officia.</p>
+
+    </div>
+    <div class="view">
+        <h1 style="color: white;">Welcome to the site!</h1>
+        <p style="color: yellow;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, doloremque.</p>
+    </div>
+</body>
+</html>

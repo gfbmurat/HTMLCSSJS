@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic Selectors</title>
+    <style>
+        /*
+        ******************Selector Yapısı*******************
+
+                selectors {
+                    attribute : value
+                }
+
+        */
+
+        /* Direk h1 etiketini seçtiğimizde tüm h1 lerin özellilkleri değişir */
+         h1 {
+            color: yellow;
+            background: blue;
+        } 
+
+        /* Birden fazla etiketini araya , koyarak seçiyoruz. */
+         h1,p {
+            color: yellow;
+            background: blue;
+        }
+
+        /* id'si logo olan bir etiketi seçmek için # işareti kullanılır. */
+         #logo {
+            color: yellow;
+            background: blue;
+        } 
+        
+        /* classı info olan bir etiketi seçmek için . kulllanılır. */
+         .info {
+            color: aqua;
+            background: red;
+        }
+        
+        /* Örnek : id'si logo olan ve classı lead olanları seç. */
+         #logo, .lead {
+            color: yellow;
+            background: blue;
+        }
+        
+        /* Örnek : id'si para1 olan ve aynı zamanda classı da lead olanı seçer.  */
+         #para1.lead {
+            color: yellow;
+            background: blue;
+        }
+        
+        /* Linklerin altında çizgileri kaldırmak istersek -text-decoration özelliğini none vermeliyiz.
+        Çizgi koymak istersek underline yazmalıyız. */
+         a {
+            text-decoration: none;
+        }
+        
+        /* 3 tane a var.Biz burada ul altındaki li'nin altında ki a etiketlerini seçmek istersek
+        araya boşluk bırakarak seçebiliriz. */
+         ul li a {
+            color: red;
+        }
+        
+        /* Örnek : Class'ı info olan span etiketine sahip olanları seçmek */
+         .info span {
+            color: red;
+        }
+        
+        /*Örnek : Class'ı info olanların altında ki classı primary olanları seçmek */
+         .info .primary {
+            color: red;
+        }
+        
+        /* Sayfadaaki bütün herşeyi seçmek için yıldız(*) kullanılır.(Evrensel Seçici) */
+         * {
+            color: white;
+            background: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+
+
+
+<body>
+    <header>
+        <h1>Header 1</h1>
+        <h1 id="logo">Logo</h1>
+
+        <ul>
+           <li>
+               <a href="#">Contact</a>
+           </li> 
+           <li>
+               <a href="#">Services</a>
+           </li>
+        </ul>
+    </header>
+    <h1>Header 2</h1>
+    <p id="para1" class="lead info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, modi.
+    </p>
+    <p class="info">
+        Lorem ipsum <span class="primary">dolor</span>  sit amet consectetur adipisicing elit. In, commodi.
+    </p>
+    <p class="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae?
+    </p>
+    <p>Test Paragraph</p>
+
+    <a href="#">Home</a>
+</body>
+</html>

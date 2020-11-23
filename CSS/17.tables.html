@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tables Styling</title>
+    <style>
+        table,tr,td,th {
+            border: 1px solid black; /* Kenarlık ekledik */
+            border-collapse: collapse; /* Borderları birleştirir. */
+        }
+        table {
+            width:  100%; /* Ekranın %100'üne table genişlettik. */
+            margin : 0 auto; /* Üst ve aşağı margin 0 sağ ve sola otomatik
+            ortalaması için margin verdik.  */
+            font-size: 1.5em; /* 1.5em font-size verdik.  */
+        }
+        th,td {
+            padding: 10px; 
+/* th(table head) ve td(table body içindeki tr içi)'leri padding verdik. */
+        }
+        thead tr { 
+    /* tablo başlık kısmına ve table rowlara renk ve arkaplan verdik.  */
+            background: springgreen;
+            color: white;
+        }
+        tbody tr { /* tablo body kısmı ve satırlara textler ortalandı. */
+            text-align: center;
+        }
+        tbody tr:nth-child(even) {
+            /* Çift olan satırlara arkaplan ekledik. */
+            background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+            /* Üstüne gelince arkaplan verilecek. */
+            background: #ddd;
+        }
+        
+    </style>
+</head>
+<body>
+    <table class="employees">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Murat</td>
+            <td>Bilişim</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>Muhammed</td>
+            <td>İnşaat</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>Abdullah</td>
+            <td>Siyaset</td>
+            <td>4000</td>
+        </tr>
+        
+    </tbody>
+    </table>
+</body>
+</html>

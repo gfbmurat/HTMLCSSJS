@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Code</title>
+    <style>
+        /*
+            selectors:pseudo_Class{
+                
+            }
+        */
+        a.facebook {
+            font-size: 1.5em;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+            background: blue;
+            border : 1px solid blue;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.youtube {
+            font-size: 1.5em;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+            background: red;
+            border : 1px solid red;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        a.youtube:hover {
+            /* Link üzerine geldiğimizde yapılacak işlemler */
+            background: white;
+            color: red;
+        }
+        a.facebook:hover {
+            /* Link üzerine geldiğimizde yapılacak işlemler */
+            background: white;
+            color: blue;
+
+        }
+        a:link {
+            color : green;
+            /* Linke hiç tıklanmadıysa renk yeşil. */
+        }
+        a.facebook,.youtube:visited {
+            color:black;
+            /* Linke 1 kere bile tıklansa artık rengi turkuaz. */
+        }
+        a.facebook:hover {
+            color: blue;
+            /* Link üzerine geldiğimizde renk değişir. */
+        }
+        a.facebook:active {
+            color:deeppink;
+            /* Link üzerine basılı tutulursa renk pembe */
+        }
+        input {
+            margin-left: 20px;
+            padding: 10px;
+            font-size: 1.5em;
+            border-radius: 4px;
+            border : solid 1px;
+            margin-top: 10px;
+            /* İnputa basıldığında focus durumuna geçer. */
+        }
+        input:focus {
+            border : solid red 2px;
+            color : green;
+            /* İnputun içine girdiğimizde border rengi kalınlığı ve
+            içine yazdığımız yazı değişecek */
+        }
+    </style>
+</head>
+<body>
+    <a class="facebook" href="https://www.facebook.com/">Facebook</a>
+    <a class="youtube" href="https://www.youtube.com/">Youtube</a>
+    <input placeholder="Name" type="text">
+</body>
+</html>

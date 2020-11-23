@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex-Items</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 75%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            min-height: 600px;
+            background-color: black;
+        }
+        .box {
+            text-align: center;
+            background-color: #f2f2f2;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box-1 {
+        /*Order sayesinde divleri sıraladık box-1 en sona box-2 başa
+            box-3 ise ortaya gelir */
+            order: 3;
+            background-color: blueviolet;
+            flex-grow: 1; /*Default değer:0 */
+            /*1/6'sını doldurur. */
+            /*Sadece 1 tanesine flex-grow verirsek boşlukları doldurur. */
+        }
+        .box-2 {
+            order : 1;
+            background-color: cyan;
+            flex-grow: 2;
+            /*2/6'ünü doldurur. */
+        }
+        .box-3 {
+            order: 2;
+            background-color: springgreen;
+            align-self: center; 
+            flex-grow: 3;
+            /*3/6'sını doldurur. */
+    /*Sadece bir kutunun yerini değişmek istersek align-self kullanılır.*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">Box1</div>
+        <div class="box box-2">Box2</div>
+        <div class="box box-3">Box3</div>
+    </div>
+</body>
+</html>

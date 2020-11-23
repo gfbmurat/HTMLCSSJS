@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Elements</title>
+    <style>
+        .para1 {
+            font-size: 1.5em;
+            letter-spacing: 2px; /* Harflerin arasını açtık. */
+            line-height: 1.5em; /* Satırların arasını açtık. */
+        }
+        .para1::first-line {
+            color: red;
+            /* Sadece ilk satırın rengi kırmızı olur. */
+        }
+        .para1::first-letter {
+            color: darkorange;
+            font-size: 50px;
+            /* Sadece ilk karakterin rengi değişir. */
+        }
+        .para1::after {
+            content: "Paragraf Sonrasını Ekledik.";
+            color: red;
+        }
+        .para1::before {
+            content: "Paragraf Öncesini Ekledik.";
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt veniam ab fuga soluta natus odio! Aut, magnam sit natus dolor, consequuntur atque reprehenderit dignissimos distinctio tempore fugit aperiam deleniti dicta, placeat dolore excepturi exercitationem cupiditate? Perferendis, aperiam similique. Adipisci distinctio inventore minus molestias illum ullam nisi fuga placeat cupiditate earum accusantium hic voluptas sunt porro commodi, aliquam alias doloremque animi omnis vel magnam necessitatibus eligendi? Odio laboriosam dolore earum expedita iure. Adipisci temporibus sapiente iusto illum perspiciatis, aut voluptas qui eius aliquam dolore consectetur voluptate atque eum ab dolor asperiores culpa nihil? Iste, eius ab expedita ex hic ea temporibus.</p>
+</body>
+</html>

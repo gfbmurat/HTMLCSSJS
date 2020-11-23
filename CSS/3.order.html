@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Order</title>
+    <!-- İşlemler üstten aşağı doğru çalışır. -->
+    <style>
+        /* İşlemler sırayla çalışır */
+        h1 {
+            color: blue;
+        }
+        /* Önce h1'ler mavi oldu ancak altta id'si logo olanı kırmızı 
+        yapınca sonradan yaptığımız önceki ezdi. */
+        #logo {
+            color: red;
+        }
+ /* Önce genel olanlar yukarı yazmak daha sonra özel olanlar yazılmalı */
+
+      /* İmportant anahtar kelimesi */   
+      ul li a {
+            color : seagreen !important
+        }
+        /* İmportant kelimesini kullanarak aşağıda kullanılan style'ın 
+        üstte kullandığımız style ezmesini(değiştirmesini) engelledik. */ 
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Header 1</h1>
+        <h1 id="logo">Logo</h1>
+        <ul style="color: red;" >
+           <li>
+               <a href="#">Contact</a>
+           </li> 
+           <li>
+               <a href="#">Services</a>
+           </li>
+        </ul>
+    </header>
+    <h1>Header 2</h1>
+    <p id="para1" class="lead info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, modi.
+    </p>
+    <p class="info">
+        Lorem ipsum <span class="primary">dolor</span>  sit amet consectetur adipisicing elit. In, commodi.
+    </p>
+    <p class="info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, beatae?
+    </p>
+    <p>Test Paragraph</p>
+    <a href="#">Home</a>
+</body>
+</html>

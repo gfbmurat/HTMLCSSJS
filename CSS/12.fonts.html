@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+    <!--Google Fonts(https://fonts.google.com/)-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap" rel="stylesheet"> 
+    <style>
+    html {
+        font-size: 10px;
+    }
+    h1 {
+        font-family: 'Lexend Zetta', sans-serif;
+        font-style: italic;
+        /* Yazıyı italic yapmak için font-style : italic */
+        font-weight: bold;
+        /* Yazı kalınlığı için font-weight */
+        margin: 0px;
+        font-size: 20em;
+        text-transform: uppercase;
+        /* Yazıyı tamamen büyük harf yapmak için uppercase. */
+        color: yellow;
+        background: blue;
+        /* Yazdığımız fontlardan hangisi cihazda bulunuyorsa onu kullanır.*/
+    }
+    p.para1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5em;
+        /* em -> Default font-size 16px biz 2.5em dediğimiz zaman
+         2.5 * 16 = 40px denk gelir.*/
+         line-height: 1.5em;
+         /* 40px * 1.5 = 60px (Belirli elementin font-size * 1.5em) */
+        /* Line-height sayesinde satır aralarının açıklığı düzenlenebilir. */  
+    }
+    p.para2 {
+        font-size: 3rem; 
+    /* rem -> Kök element size'ının 3 katı büyüküğünde size ayarladık */
+    }
+    div {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+    }
+    div span {
+        font-size: 250%;
+        /* Kök font-size'ın %250'si kadar büyültüyoruz. */
+    }
+    </style>
+</head>
+<body>
+    <h1>
+        Fenerbahçe
+    </h1>
+    <p class="para1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat beatae explicabo error autem exercitationem! Nobis ratione delectus, cupiditate voluptas maiores quam mollitia exercitationem ipsa iure obcaecati sapiente, amet omnis quo reiciendis aliquid deleniti perspiciatis ea alias odio. Illo aliquid reprehenderit laborum, sapiente consequatur quos delectus ipsum a! Optio, assumenda asperiores.</p>
+    <p class="para2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat beatae explicabo error autem exercitationem! Nobis ratione delectus, cupiditate voluptas maiores quam mollitia exercitationem ipsa iure obcaecati sapiente, amet omnis quo reiciendis aliquid deleniti perspiciatis ea alias odio. Illo aliquid reprehenderit laborum, sapiente consequatur quos delectus ipsum a! Optio, assumenda asperiores.</p>
+
+    <div class="box-1">
+        <p>
+            Lorem ipsum dolor sit amet <span>consectetur</span>  adipisicing elit. Aperiam, eaque.
+        </p>
+    </div>
+</body>
+</html>
